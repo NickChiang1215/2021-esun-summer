@@ -1,0 +1,10 @@
+flask
+opencv-python-headless
+numpy
+pandas
+tensorflow-addons
+opencv-python
+tqdm
+matplotlib
+pytest
+tensorflow-datasets

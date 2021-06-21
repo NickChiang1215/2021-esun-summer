@@ -1,0 +1,6 @@
+tensorflow
+flask
+opencv-python-headless
+numpy
+sklearn
+matplotlib

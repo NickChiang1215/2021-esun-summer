@@ -1,0 +1,26 @@
+version: "2.4"
+services:
+    service:
+        build:
+            context: ./service
+            dockerfile: Dockerfile
+        image: esun_service
+        container_name: esun_service
+        privileged: true
+        restart: always
+        runtime: nvidia
+        environment:
+          - NVIDIA_VISIBLE_DEVICES=all
+          - port=8080
+        volumes:
+          - "/home/nick/service:/app"
+        cap_add:
+          - SYS_ADMIN
+        ports:
+          - "8080:8080"
+        networks:
+          - my_net
+
+networks:
+    my_net:
+        driver: bridge
